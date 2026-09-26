@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const audio = document.getElementById('final-music');
   const iconeAudio = document.getElementById('icone-audio');
   const btnAudio = document.getElementById('btn-audio');
+  
+  const dados = new URLSearchParams(window.location.search);
+  const avatarEscolhido = dados.get('avatar') || 'dustin';
+  const irMundoInvertido = document.getElementById('ir-mundo-invertido');
 
   // Ajusta o ícone inicial de acordo com o estado do áudio ao carregar
   if (audio && iconeAudio) {
@@ -10,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnAudio) {
     btnAudio.addEventListener('click', alternarAudio);
+  }
+
+  if (irMundoInvertido) {
+    irMundoInvertido.addEventListener('click', () => {
+      window.location.href = '../mundo-invertido.html?avatar=' + avatarEscolhido + '&nivel=0';
+    });
   }
 });
 
