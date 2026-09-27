@@ -5,6 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mapanormal-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 body {
   overflow-x: hidden;
@@ -29,38 +43,63 @@ a:hover {color: crimson;}
     border: solid;
 }
 
+
+.mapanormal-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.vidas {
+    display: flex;
+    position: absolute; left: 111.5%; bottom: 83%; 
+}   /* ← fecha aqui */
+
 #cabeça-vidas {
-    position: absolute; right: 30px; top: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    z-index: 5;
+}
+
+#cabeça {
+    width: 94px;
+    height: 94px;
+    animation: piscar 2s infinite;
+    /* remover completamente o position: absolute e o left/bottom daqui */
 }
 
 #vidas {
     width: 140px;
     height: auto;
 }
-
-#cabeça {
-    width: 94px;
-    height: 94px;
-    display: flex;
-    align-items: center;
-    animation: piscar 2s infinite;
+.avatar {
+    position: absolute;
+    left: 20%;    /* mesmas coordenadas do #normal1, por exemplo */
+    bottom: 49%;
+    width: 90px;
+    height: auto;
+    transform: translate(-30%, -100%); /* levanta o personagem acima do botão */
+    z-index: 2;
 }
-
 #avatar {
     width: auto;
     height: 180px;
     display: flex;
     position: absolute; left: 18%; bottom: 52%;
     z-index: 1;
+
 }
 
 .barra-fora {
-    position: absolute; left: 14px; top: 60px;
-    width: 22%;
-    height: 14px;
+    position: absolute; left: 1%; top: 7%;
+    width: 28%;
+    height: 2%;
     background-color: #0b2222;
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -85,8 +124,8 @@ button {
     background: yellow;
     cursor: pointer;
     outline: none;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -96,12 +135,31 @@ button {
     position: absolute;
 }
 
+
+.fases button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130px;  
+    height: 130px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+#normal1 { left: 25%;   bottom: 48%; }
+#normal2 { left: 46.5%;  bottom: 10.3%; }
+#normal3 { left: 76.5%;  bottom: 33.4%; }
+#normal4 { left: 67.3%;  bottom: 39%; }
+#normal5 { left: 94.8%;  bottom: 49%; }
+#normal6 { left: 65.8%;  bottom: 16.6%; }
 #normal0 { left: 20%;   bottom: 49%; }
 #normal1 { left: 37%;  bottom: 11%; }
 #normal2 { left: 60.5%;  bottom: 34.1%; }
 #normal3 { left: 53.2%;  bottom: 40%; }
 #normal4 { left: 74.8%;  bottom: 50%; }
 #normal5 { left: 52.1%;  bottom: 17%; }
+
 
 #mapanormal img {
   width: 100vw;
@@ -113,4 +171,5 @@ button {
 
 @keyframes piscar {
   0%, 100% {opacity: 1; }
-  50% {opacity: 0; }}
+  50% {opacity: 0; }
+}

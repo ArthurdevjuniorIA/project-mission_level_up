@@ -5,6 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mapanormal-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 body {
   overflow-x: hidden;
@@ -21,12 +35,17 @@ a:hover {
     color:rgb(110, 0, 174);
 }
 
-
+.mapainvertido-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
 
 .barra-fora {
-    position: absolute; left: 14px; top: 60px;
-    width: 22%;
-    height: 14px;
+    position: absolute; left: 1%; top: 7%;
+    width: 28%;
+    height: 2%;
     background-color: #0b2222;
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -58,31 +77,36 @@ a:hover {
 #back:hover { color: rgb(110, 0, 174); }
 
 #cabeça-vidas {
-    position: absolute; right: 30px; top: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    z-index: 5;
+}
+
+#cabeça {
+    width: 94px;
+    height: 94px;
+    animation: piscar 2s infinite;
+    /* remover completamente o position: absolute e o left/bottom daqui */
 }
 
 #vidas {
     width: 140px;
     height: auto;
 }
-
-#cabeça {
-    width: 94px;
-    height: 94px;
-    display: flex;
-    align-items: center;
-    animation: piscar 2s infinite;
-}
-
 #avatar {
     width: auto;
     height: 180px;
     display: flex;
+
+    position: absolute; left: 09%; bottom: 69%;
+
     position: absolute; left: 7%; bottom: 69%;
     z-index: 1;
+
 }
 
 button {
@@ -101,13 +125,23 @@ button {
     position: absolute;
 }
 
+.fases button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130px;  
+    height: 130px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
 
 
-#invertido1 { left: 9%;   bottom: 67%; }
-#invertido2 { left: 29%;  bottom: 42%; }
-#invertido3 { left: 47.1%;  bottom: 47%; }
-#invertido4 { left: 63.5%;  bottom: 40%; }
-#invertido5 { left: 86%;  bottom: 65.5%; }
+#invertido1 { left: 11.5%;   bottom: 67%; }
+#invertido2 { left: 37%;  bottom: 42%; }
+#invertido3 { left: 60%;  bottom: 47%; }
+#invertido4 { left: 81%;  bottom: 40%; }
+#invertido5 { left: 109.5%;  bottom: 65.5%; }
 
 #mapainvertido img {
   width: 100vw;
