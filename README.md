@@ -67,7 +67,7 @@ project-mission_level_up/
 │       │   └── nor-fase2.html
 │       ├── inverse-fases/     # Fases 1 a 5 do Mundo Invertido (JavaScript)
 │       │   ├── inver-fase1.html
-│       │   └── ...
+│       │   └── inver-fase2.html
 │       ├── finals/            # Telas de encerramento e vitória
 │       ├── colaboradores.html # Créditos e Player Cards dos desenvolvedores
 │       ├── mundo-normal.html  # Seleção de fases do Mundo Normal
