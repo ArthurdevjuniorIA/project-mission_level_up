@@ -64,10 +64,10 @@ project-mission_level_up/
 │   └── pages/                 # Módulos e páginas do jogo
 │       ├── normal-fases/      # Fases 1 a 6 do Mundo Normal (HTML & CSS)
 │       │   ├── nor-fase1.html
-│       │   └── ...
+│       │   └── nor-fase2.html
 │       ├── inverse-fases/     # Fases 1 a 5 do Mundo Invertido (JavaScript)
 │       │   ├── inver-fase1.html
-│       │   └── ...
+│       │   └── inver-fase2.html
 │       ├── finals/            # Telas de encerramento e vitória
 │       ├── colaboradores.html # Créditos e Player Cards dos desenvolvedores
 │       ├── mundo-normal.html  # Seleção de fases do Mundo Normal
