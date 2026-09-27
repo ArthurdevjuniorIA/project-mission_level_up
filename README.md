@@ -48,34 +48,69 @@ A cada fase concluída, o jogador acumula XP e desbloqueia a próxima etapa do m
 ```text
 project-mission_level_up/
 │
-├── src/
-│   ├── assets/                 # Imagens, ícones e vídeos do projeto
-│   │   ├── images/              # Artes dos personagens, cenários e ícones
-│   │   └── videos/               # Vinhetas e animações
-│   │
-│   ├── css/                   # Folhas de estilo, temas néon e layouts responsivos
-│   │
-│   ├── js/                    # Scripts de manipulação do DOM, fluxo do jogo e progresso
-│   │   ├── fases-mundo-invertido.js
-│   │   ├── fases-mundo-normal.js
-│   │   ├── final.js
-│   │   ├── page1.js ... page5.js
-│   │
-│   └── pages/                 # Módulos e páginas do jogo
-│       ├── normal-fases/      # Fases 1 a 6 do Mundo Normal (HTML & CSS)
-│       │   ├── nor-fase1.html
-│       │   └── nor-fase2.html
-│       ├── inverse-fases/     # Fases 1 a 5 do Mundo Invertido (JavaScript)
-│       │   ├── inver-fase1.html
-│       │   └── inver-fase2.html
-│       ├── finals/            # Telas de encerramento e vitória
-│       ├── colaboradores.html # Créditos e Player Cards dos desenvolvedores
-│       ├── mundo-normal.html  # Seleção de fases do Mundo Normal
-│       └── mundo-invertido.html # Seleção de fases do Mundo Invertido
+├── docs/                           # Documentação do projeto
 │
-├── index.html                 # Ponto de entrada da aplicação (SPA)
-├── LICENSE                    # Licença do projeto
-└── README.md                  # Documentação principal
+├── src/
+│   ├── assets/                     # Recursos de mídia da aplicação
+│   │   ├── audios/                 # Trilhas sonoras e efeitos de áudio (.mp3)
+│   │   │   ├── creatorsaudio.mp3
+│   │   │   ├── finaldustinaudio.mp3
+│   │   │   ├── finaleddieaudio.mp3
+│   │   │   ├── finalgorgonaudio.mp3
+│   │   │   ├── finalinverseaudio.mp3
+│   │   │   ├── mundoinvertidoaudio.mp3
+│   │   │   └── mundonormalaudio.mp3
+│   │   ├── images/                 # Imagens, sprites e mapas
+│   │   └── videos/                 # Vídeos e vinhetas de abertura
+│   │
+│   ├── css/                        # Folhas de estilo
+│   │   ├── colaboradores.css
+│   │   ├── fases-mundo.invertido.css
+│   │   ├── fases-mundo.normal.css
+│   │   ├── finals.css
+│   │   ├── page1.css
+│   │   ├── page2.css
+│   │   ├── page3-4.css
+│   │   ├── page5.css
+│   │   └── page6.css
+│   │
+│   ├── js/                         # Scripts de lógica e interatividade
+│   │   ├── colaborators.js
+│   │   ├── fases-mundo.invertido.js
+│   │   ├── fases-mundo.normal.js
+│   │   ├── final.js
+│   │   ├── page1.js
+│   │   ├── page2.js
+│   │   ├── page3-4.js
+│   │   ├── page5.js
+│   │   └── page6.js
+│   │
+│   └── pages/                      # Páginas e módulos do jogo
+│       ├── finals/                 # Telas de encerramento por personagem
+│       │   ├── finaldustin.html
+│       │   ├── finaleddie.html
+│       │   ├── finalgorgon.html
+│       │   └── finalinverse.html
+│       ├── inverse-fases/          # Fases do Mundo Invertido (1 a 5)
+│       │   ├── inver-fase1.html
+│       │   ├── inver-fase2.html
+│       │   ├── inver-fase3.html
+│       │   ├── inver-fase4.html
+│       │   └── inver-fase5.html
+│       ├── normal-fases/           # Fases do Mundo Normal (1 a 6)
+│       │   ├── nor-fase1.html
+│       │   ├── nor-fase2.html
+│       │   ├── nor-fase3.html
+│       │   ├── nor-fase4.html
+│       │   ├── nor-fase5.html
+│       │   └── nor-fase6.html
+│       ├── colaboradores.html      # Página da equipe de desenvolvedores
+│       ├── mundo-invertido.html    # Seleção de fases do Mundo Invertido
+│       └── mundo-normal.html       # Seleção de fases do Mundo Normal
+│
+├── index.html                      # Ponto de entrada principal da aplicação (SPA)
+├── LICENSE                         # Licença de uso
+└── README.md                       # Documentação principal
 ```
 
 ---
